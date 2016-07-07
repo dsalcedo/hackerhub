@@ -277,6 +277,7 @@ a.social-button:hover{
     width: 100%;
     border: 2px solid #eee;
     border-radius: 3px;
+    margin-bottom: 30px;
 }
 .card {
     width: 100%;
@@ -307,6 +308,9 @@ a.social-button:hover{
 
 /* card meta */
 
+.card__meta{
+    margin-top: -15px;
+}
 .card__meta time {
     font-size: 1.5rem;
     color: #bbb;
@@ -315,7 +319,16 @@ a.social-button:hover{
 
 
 /* card article */
-
+.card__article h2
+{
+    margin-top: 5px;
+}
+.card__article h2 > a{
+    color: #FC3C2A;
+}
+.card__article h2 > a:hover{
+    color: #333;
+}
 .card__article a {
     text-decoration: none;
     color: #444;
@@ -433,6 +446,41 @@ a.social-button:hover{
 .twitter:hover,
 .whatsapp:hover {
     color: #eee;
+}
+
+
+/*
+* Date card
+*/
+.fecha{
+    top:115px;
+    position: absolute;
+}
+.theDate,
+.triangle{
+    display: inline-block;
+    float: left;
+}
+.theDate
+{
+    width: 60px;
+    height: 60px;
+    background: #f8423f;
+    padding: 10px 10px 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 0 0 30px;
+    border-color: transparent transparent transparent #f8423f;
+    line-height: 0px;
+    _border-color: #000000 #000000 #000000 #f8423f;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
 /*
