@@ -492,9 +492,42 @@ a.social-button:hover{
     padding: 15px;
     border-radius: 2px;
 }
+h3.event-details-header{
+    color: #cb1d2c;
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
 .event-details{
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+}
+.event-details strong{
+    color: #cb1d2c;
+}
+.event-description p{
+    line-height: 1.7;
+    margin: 0 0 10px;
+    font-size: 17px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+
+/*
+* BUTTONS
+*/
+.btn-hub
+{
+    color: #fff;
+    background-color: #cb1d2c;
+    border-color: #b91a27;
+}
+.btn-hub:hover,
+.btn-hub:focus
+{
+    color: #fff;
+    background-color: #b91a27;
 }
 
 /*
