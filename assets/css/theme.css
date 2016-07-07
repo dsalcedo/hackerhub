@@ -14,6 +14,25 @@ a:focus
 {
     text-decoration: none;
 }
+::-moz-selection {
+    background: #cb1d2c;
+    color:#fff;
+}
+::selection {
+    background: #cb1d2c;
+    color:#fff;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Arimo', sans-serif;
+}
+
+.titulo
+{
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
 /*
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:300,400,700|Arimo:400,700" rel="stylesheet">
@@ -137,7 +156,7 @@ a.btn-subscribe:hover
 .container-login
 {
     background: #ffffff;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
 }
 a.social-button {
     font-family: 'Open Sans', sans-serif;
@@ -173,6 +192,7 @@ a.social-button.facebook
 {
     background: rgb(255, 255, 255) url('http://eswarasai.com/projects/social-buttons/img/facebook.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
     border: 1px solid rgb(60, 90, 154);
+    color:rgb(60, 90, 154);
 }
 a.social-button.twitter:hover {
     border-color: rgb(85, 172, 238);
