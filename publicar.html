@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <title>Publicar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jockey+One|Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- editor -->
+    <link rel="stylesheet" href="assets/libs/froala/css/froala_editor.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/froala_style.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/code_view.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/image.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/colors.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/file.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/image.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/image_manager.css">
+    <link rel="stylesheet" href="assets/libs/froala/css/plugins/line_breaker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+    <style>
+        .hackerhub-editor label,
+        .hackerhub-editor input[type=text],
+        .hackerhub-editor textarea,
+        .hackerhub-editor select
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 2.2rem;
+        }
+        .hackerhub-editor input[type=text],
+        .hackerhub-editor textarea,
+        .hackerhub-editor select
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            min-height: 50px;
+            font-weight: 300;
+        }
+        textarea[name=resumen]
+        {
+            resize: none;
+        }
+        .fr-wrapper
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+            font-size: 2.2rem;
+        }
+        .fr-wrapper p
+        {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hacker<span class="hub">hub</span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Manifiesto</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#collapseLogin" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLogin">Iniciar sesión</a></li>
+                <li><a href="#" class="btn-subscribe">Suscríbete</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<div class="container" style="padding-top: 30px;">
+    <form class="hackerhub-editor">
+        <div class="col-md-9">
+                <div class="form-group">
+                    <label for="tituloEntrada">Título de la publicación</label>
+                    <input type="text" class="form-control" id="tituloEntrada" placeholder="Ingresar un título">
+                </div>
+                <div class="form-group">
+                    <label>Resumen</label>
+                    <textarea name="resumen" id="" class="form-control" cols="30" rows="3" placeholder="Agregar un resumen" maxlength="255"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Redactar</label>
+                    <textarea id="edit" name="content"></textarea>
+                </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">Cover</label>
+                <input type='file' id="imgInp" />
+                <div class="col-md-12">
+                    <div id="preview-cover" class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Categoria</label>
+                <select class="form-control">
+                    <option>Selecciona</option>
+                    <option>Tecnologia</option>
+                    <option>Emprendimiento</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <label style="font-size: 14px;">
+                    <input type="checkbox"> Publicación desatacada
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default btn-lg btn-primary">Publicar</button>
+        </div>
+    </form>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">
+            2016 Hackerhub
+        </p>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- editor -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/froala_editor.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/code_view.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/draggable.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/font_size.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/font_family.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/paragraph_style.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/image.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/link.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/video.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/colors.min.js"></script>
+<script type="text/javascript" src="assets/libs/froala/js/plugins/line_breaker.min.js"></script>
+<script>
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+
+            $('#preview-cover').empty();
+
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+
+                var img = $('<img />', {
+                    id: 'imagen-temporal',
+                    src: e.target.result,
+                    alt: 'Cover',
+                    class: 'img-responsive'
+                });
+                img.appendTo($('#preview-cover'));
+
+                //$('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+
+        $('#edit').froalaEditor();
+
+        $(document).on("change", "#imgInp", function(){
+            readURL(this);
+        });
+
+
+
+        /*$('#edit').froalaEditor({
+            toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', '|', 'paragraphFormat', 'align', 'undo', 'redo', 'html'],
+            // Colors list.
+            colorsBackground: [
+                '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+                '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ],
+            colorsDefaultTab: 'background',
+            colorsStep: 6,
+            colorsText: [
+                '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+                '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ]
+        })
+        */
+
+</script>
+</body>
+</html>
