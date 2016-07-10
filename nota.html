@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <title>Nota</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jockey+One|Source+Sans+Pro:300,400,700|Oswald:400,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /* Hide for mobile, show later */
+        .sidebar {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 61px;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                display: block;
+                padding: 20px;
+                overflow-x: hidden;
+                overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+                background-color: #fff;
+                border-right: 1px solid #ccc;
+            }
+        }
+
+        /* Sidebar navigation */
+        .nav-sidebar {
+            margin-right: -21px; /* 20px padding + 1px border */
+            margin-bottom: 20px;
+            margin-left: -20px;
+        }
+        .nav-sidebar > li > a {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus {
+            color: #fff;
+            background-color: #428bca;
+        }
+
+
+        /*
+         * Main content
+         */
+
+        .main {
+            padding: 20px;
+        }
+        @media (min-width: 768px) {
+            .main {
+                padding: 91px 40px 40px 40px;
+            }
+        }
+        .main .page-header {
+            margin-top: 0;
+            font-family: Oswald;
+            font-size: 3.8rem;
+            line-height: 127%;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hacker<span class="hub">hub</span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Manifiesto</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#collapseLogin" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLogin">Iniciar sesión</a></li>
+                <li><a href="#" class="btn-subscribe">Suscríbete</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<style>
+    .sidebar .media
+    {
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom:20px;
+        padding-top:5px;
+    }
+    .sidebar .media > .media-body a
+    {
+        color: #333;
+    }
+    .sidebar .media > .media-body a:hover
+    {
+        color: #ff3030;
+    }
+    .sidebar .media > .media-body .media-heading
+    {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .sidebar .media > .media-body
+    {
+        font-size: 18px;
+        line-height: 1.8rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    }
+    .excerpt
+    {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+    .content{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .content p
+    {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+    }
+    .content p > a
+    {
+        color: #cb1d2c;
+    }
+    .content p > a:hover
+    {
+        color: #ff3030;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+            <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="http://cdn.expansion.mx/dims4/default/3204a59/2147483647/thumbnail/3322x2492%5E/resize/110x82%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2Fc1%2Ff0%2F698711944989a30778921587ecbb%2Fferia-del-taco-tlalpan-9.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Estilo</h4>
+                        <a href="">
+                            ¿Cómo alcanzas las metas de nutrición con tantas opciones de comida rápida?
+                        </a>
+                    </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="http://cdn.expansion.mx/dims4/default/3204a59/2147483647/thumbnail/3322x2492%5E/resize/110x82%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2Fc1%2Ff0%2F698711944989a30778921587ecbb%2Fferia-del-taco-tlalpan-9.jpg" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Estilo</h4>
+                    ¿Cómo alcanzas las metas de nutrición con tantas opciones de comida rápida?
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="http://cdn.expansion.mx/dims4/default/3204a59/2147483647/thumbnail/3322x2492%5E/resize/110x82%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2Fc1%2Ff0%2F698711944989a30778921587ecbb%2Fferia-del-taco-tlalpan-9.jpg" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Estilo</h4>
+                    ¿Cómo alcanzas las metas de nutrición con tantas opciones de comida rápida?
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="http://cdn.expansion.mx/dims4/default/3204a59/2147483647/thumbnail/3322x2492%5E/resize/110x82%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2Fc1%2Ff0%2F698711944989a30778921587ecbb%2Fferia-del-taco-tlalpan-9.jpg" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Estilo</h4>
+                    ¿Cómo alcanzas las metas de nutrición con tantas opciones de comida rápida?
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+            <div class="col-md-12 text-center">
+                <div id="collapseLogin" class="row collapse container-login">
+                    <a href="" class="social-button twitter">Ingresa con Twitter</a>
+                    <a href="" class="social-button facebook">Ingresa con Facebook</a>
+                </div>
+            </div>
+            <h1 class="page-header">A 20 años de ‘Dolly’, 8 datos que quizás no sabías sobre la clonación</h1>
+            <p>Sábado, 9 de julio de 2016 a las 6:30 AM</p>
+            <p class="excerpt">En febrero de 1997 fue presentada al mundo el primer mamífero en ser clonado a partir de células de un animal adulto, que había nacido el 5 de julio del año pasado, pero qué ha pasado desde entonces.</p>
+            <img src="http://cdn.expansion.mx/dims4/default/d820ceb/2147483647/crop/1200x675%2B0%2B0/resize/800x450%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2F77%2Fa8%2F4269beea442b8e6b0587db933c23%2Fdolly-afp.jpg" class="img-responsive">
+            <div class="content">
+                <p>La recordada oveja recibió la eutanasia en febrero de 2003 cuando los científicos pudieron ver que tenía signos de enfermedad pulmonar avanzada.</p>
+                <p>Aunque es célebre, <i data-rte2-sanitize="italic">Dolly</i> no fue el primer ni único animal en ser clonado, y se ha avanzado mucho desde su nacimiento.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto assumenda, consectetur cum dolore eius error laboriosam laborum nisi quos tempora temporibus. Dolorum libero magni quam quas, suscipit tempora tenetur.</p>
+                <p>En 2002, la organización Clonaid dijo que había logrado clonar a un ser humano: la bebé Eva. En 2003 el laboratorio dijo que había vuelto a clonar a un humano, esta vez un niño que fue creado a partir de tejido del hijo de una pareja japonesa que a los dos años estaba en un coma tras un accidente en 2001. Clonaid nunca ha mostrado evidencia física de estas clonaciones.</p>
+                <p>En 2011, siete perros <a href="#">'súper clones'</a> entraron a trabajar al aeropuerto de Corea del Sur para detectar contrabando. Son labradores dorados genéticamente idénticos a 'Chase', quien fue el mejor canino de detección de drogas hasta que se retiró en 2007.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">
+            2016 Hackerhub
+        </p>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+    $(".font-button").bind("click", function () {
+        var size = parseInt($('content').css("font-size"));
+        if ($(this).hasClass("plus")) {
+            size = size + 2;
+        } else {
+            size = size - 2;
+            if (size <= 10) {
+                size = 10;
+            }
+        }
+        $('.content').css("font-size", size);
+    });
+</script>
+</body>
+</html>
